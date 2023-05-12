@@ -12,12 +12,12 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     setInterval(() => {
       const now = new Date();
-      const camp = new Date(2023, 8, 25);
+      const camp = new Date(2023, 7, 25, 12);
       const diff = camp.getTime() - now.getTime();
       if (diff > 0) {
         const diffDays = Math.floor(diff / 86400000); // days
         const diffHrs = Math.floor((diff % 86400000) / 3600000); // hours
-        const diffMins = Math.round(((diff % 86400000) % 3600000) / 60000); // minutes
+        const diffMins = Math.floor(((diff % 86400000) % 3600000) / 60000); // minutes
         const diffSecs = Math.floor((diff / 1000) % 60);
 
         let countdown = diffDays ? diffDays + ' Tage ' : '';
