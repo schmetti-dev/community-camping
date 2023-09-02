@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'community-camping';
-  countdown = '25.08. - 03.09.';
+  countdown = 'August 2024';
 
   ngOnInit(): void {
     setInterval(() => {
       const now = new Date();
-      const camp = new Date(2023, 7, 25, 12);
+      const camp = new Date(2024, 7, 25, 12);
       const diff = camp.getTime() - now.getTime();
       if (diff > 0) {
         const diffDays = Math.floor(diff / 86400000); // days
